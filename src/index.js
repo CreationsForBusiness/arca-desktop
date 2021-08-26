@@ -1,12 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { ThemeProvider, ColorModeProvider } from "@chakra-ui/react"
+
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ThemeProvider>
+      <ColorModeProvider options={{
+        useSystsemColorMode: true
+      }}>
+        <App />
+      </ColorModeProvider>
+    </ThemeProvider>  
   </React.StrictMode>,
   document.getElementById('root')
 );
