@@ -1,18 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
 import { ThemeProvider, ColorModeProvider } from "@chakra-ui/react"
 
-import './index.css';
-import App from './App';
+import App from './app';
 import reportWebVitals from './reportWebVitals';
+
+const optionsColor = {
+  useSystsemColorMode: true
+};
 
 ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider>
-      <ColorModeProvider options={{
-        useSystsemColorMode: true
-      }}>
-        <App />
+      <ColorModeProvider options={optionsColor}>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
       </ColorModeProvider>
     </ThemeProvider>  
   </React.StrictMode>,
