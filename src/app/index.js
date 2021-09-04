@@ -1,10 +1,9 @@
-import Routes from '../shared/routes';
+import { withContextProvider } from './withContexts';
 
-import routes from '../settings/routes';
+import App from './app';
 
 import './index.css';
 
+const Main = () => <App />
 
-const App = () => <Routes auth={true} routes={routes} />
-
-export default App;
+export default withContextProvider(Main)

@@ -1,25 +1,22 @@
-  
-import { createElement } from 'react'
-import PropTypes from 'prop-types'
+import { withDB } from "react-pouchdb";
 
-const withDatabase = Target => {
-  const WithDatabase = (props, context) =>
-    createElement(
-      Target,
-      Object.assign(
-        {},
-        { ...props, 'data-test-id': 'child-component' },
-        {
-          socket: context.socket,
-        }
-      )
+const withDatabase = Component => name => {
+  return withDB(name, ({ db, ...props }) => {
+    db.record = (name) => db.get('info')
+      .catch((err) => {
+        const { status } = err;
+        if(status === 404) 
+          return {}
+        throw err
+      })
+
+    return (
+      <Component 
+        db={db}
+        {...props}
+      />
     )
-
-  SocketConsumer.contextTypes = {
-    socket: PropTypes.oneOfType([PropTypes.bool, PropTypes.object]),
-  }
-
-  return SocketConsumer
+  })
 }
 
 export default withDatabase

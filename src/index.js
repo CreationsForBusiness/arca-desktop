@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 import { ThemeProvider, ColorModeProvider } from "@chakra-ui/react"
 
+
 import App from './app';
 import reportWebVitals from './reportWebVitals';
 
@@ -14,9 +15,9 @@ ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider>
       <ColorModeProvider options={optionsColor}>
-        <BrowserRouter>
-          <App />
-        </BrowserRouter>
+          <BrowserRouter>
+            <App />
+          </BrowserRouter>
       </ColorModeProvider>
     </ThemeProvider>  
   </React.StrictMode>,

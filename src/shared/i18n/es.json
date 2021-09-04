@@ -1,0 +1,9 @@
+{
+  "locale": "es-la",
+  "install": {
+    "welcome": "Bienvenido"
+  },
+  "errors": {
+    "something_wrong": "Ops, algo salió mal."
+  }
+}
