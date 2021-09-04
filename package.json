@@ -1,5 +1,7 @@
 {
-  "name": "electron-react-demo",
+  "name": "pos-creations",
+  "author": "Creations",
+  "description": "App desktop for POS system.",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -24,8 +26,8 @@
     "start": "concurrently -k \"BROWSER=none react-scripts start\" \"yarn:electron\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "electron": "wait-on tcp:3000 && electron ."
+    "electron": "wait-on tcp:3000 && electron .",
+    "dist": "electron-builder -w -m -l"
   },
   "eslintConfig": {
     "extends": [
@@ -48,6 +50,7 @@
   "devDependencies": {
     "concurrently": "^6.2.1",
     "electron": "^13.2.2",
+    "electron-builder": "^22.11.7",
     "electron-is-dev": "^2.0.0",
     "wait-on": "^6.0.0"
   }
