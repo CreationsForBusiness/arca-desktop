@@ -12,7 +12,7 @@ const Error = ({ code, description, name }) => {
     > 
       {t('something_wrong')}
       &nbsp;
-      {code} ({name}) - {description}
+      {code} ({t(name)}) - {description}
     </Center>
   )
 }
