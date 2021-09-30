@@ -1,9 +1,9 @@
 import { Heading } from "@chakra-ui/react"
 
-const Title  = ({ text }) => {
+const Title  = ({ children }) => {
   return (
-    <Heading>
-      {text}
+    <Heading>  
+      {children}
     </Heading>
   )
 }

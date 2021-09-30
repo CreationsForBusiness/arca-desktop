@@ -31,9 +31,7 @@ const Install = () => {
         </Center>
       </GridItem>
       <GridItem className="install-background-right" style={sectionStyle}>
-        <Image 
-          src='/logotipo.png'
-        />
+        <Image  src='/logotipo.png'/>
       </GridItem>
     </Grid>
   )
