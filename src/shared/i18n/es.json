@@ -1,0 +1,9 @@
+{
+  "locale": "es-la",
+  "install": {
+    "welcome": "Gracias por elegir ARCA como su sistema financiero."
+  },
+  "errors": {
+    "something_wrong": "Ops, algo salió mal."
+  }
+}

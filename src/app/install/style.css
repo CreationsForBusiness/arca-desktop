@@ -1,0 +1,15 @@
+.install-background-right {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.install-background-right img{
+  position: absolute;
+  width: 15vw;
+  bottom: 0;
+  right: 0;
+}
+
+img {
+  width: 75%;
+}
